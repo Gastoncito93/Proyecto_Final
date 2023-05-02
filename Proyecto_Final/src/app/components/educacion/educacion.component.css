@@ -1,0 +1,12 @@
+.row{
+    padding: 20px;
+}
+div{
+    background-color: rgb(0, 174, 243);
+}
+
+/* Display: inline --> hace que en este caso el h1
+y el h3 queden en linea */
+h1, h3{
+    display: inline;
+}
