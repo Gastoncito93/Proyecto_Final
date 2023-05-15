@@ -1,10 +1,11 @@
 import { HTTP_INTERCEPTORS, HttpEvent, HttpHandler, HttpRequest } from "@angular/common/http";
 import { TokenService } from "./token.service";
 import { Observable } from "rxjs/internal/Observable";
+import { Injectable } from "@angular/core";
 
 
-
-export class InterceptorService {
+@Injectable()
+export class InterceptService {
     constructor(private tokenService: TokenService){}
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
@@ -21,6 +22,6 @@ export class InterceptorService {
 
 export const interceptProvider = [{
     provide: HTTP_INTERCEPTORS,
-    useClass: InterceptorService,
+    useClass: InterceptService,
     multi: true
 }];

@@ -4,20 +4,12 @@
  */
 package com.portfolio.gos.Repository;
 
-import com.portfolio.gos.Entity.Experiencia;
+import com.portfolio.gos.Entity.hys;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface RExperiencia extends JpaRepository<Experiencia, Integer> {
-    Optional<Experiencia> findByNombreE(String nombreE);
-    boolean existsByNombreE(String nombreE);
+
+public interface Rhys extends JpaRepository<hys, Integer>{
+    Optional<hys> findByNombre(String nombre);
+    public boolean existsByNombre(String nombre);
 }
-
-
-
-    
-
-
-
